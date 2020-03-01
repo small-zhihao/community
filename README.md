@@ -10,3 +10,4 @@
 ##工具
 [Git](https://git-scm.com/download)
 [VP](https://www.visual-paradigm.com)
+[mapper更新]（mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate）
