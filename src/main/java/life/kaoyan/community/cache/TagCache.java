@@ -23,7 +23,7 @@ public class TagCache {
            English.setTags(Arrays.asList("完形填空","阅读理解","7选5","排序题","标题匹配","翻译","写作"));
            tagDTOS.add(English);
            TagDTO politics = new TagDTO();
-           politics.setCategoryName("英语");
+           politics.setCategoryName("政治");
            politics.setTags(Arrays.asList("反对外国侵略战争","早期探索","辛亥革命","开天辟地大事变","革命新道路",
                    "抗日战争","为建设新中国而奋斗","社会主义基本制度全面建立","社会主义建设在探索中曲折发展","改革开放",
                    "物质世界和实践","事物的普遍联系和发展","客观规律与主观能动性","真理与价值"));
