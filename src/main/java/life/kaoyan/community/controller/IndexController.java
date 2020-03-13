@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@Slf4j
 public class IndexController {
     @Autowired
     private QuestionService questionService;
@@ -19,12 +18,8 @@ public class IndexController {
                          @RequestParam(name = "page",defaultValue = "1") Integer page,
                          @RequestParam(name = "size",defaultValue = "5") Integer size,
                          @RequestParam(name = "search", required = false)String search){
-        log.info("========开始===========");
-        System.out.println("进入");
         PaginationDTO pagination=questionService.list(search,page,size);
-        System.out.println("最后");
         model.addAttribute("pagination",pagination);
-        log.info("========结束===========");
         model.addAttribute("search",search);
         return "index";
     }

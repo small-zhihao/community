@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@Slf4j
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
@@ -39,16 +38,12 @@ public class QuestionService {
             search =Arrays.stream(tags).collect(Collectors.joining("|"));
 
         }
-        log.info("========进入PaginationDTO list===========");
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         questionQueryDTO.setSearch(search);
-        System.out.println(search);
-        System.out.println("进入questionExtMapper.countBySearch");
+
         Integer totalCount =questionExtMapper.countBySearch(questionQueryDTO);
-        System.out.println("=========到此一游================");
-        log.info("========经过questionExtMapper.countBySearch===========");
         if (totalCount%size==0){
             totalPage=totalCount/size;
         }else {
