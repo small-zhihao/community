@@ -11,6 +11,8 @@ import life.kaoyan.community.mapper.UserMapper;
 import life.kaoyan.community.model.Question;
 import life.kaoyan.community.model.QuestionExample;
 import life.kaoyan.community.model.User;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +25,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
@@ -36,7 +39,7 @@ public class QuestionService {
             search =Arrays.stream(tags).collect(Collectors.joining("|"));
 
         }
-
+        log.info("========进入PaginationDTO list===========");
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
@@ -45,6 +48,7 @@ public class QuestionService {
         System.out.println("进入questionExtMapper.countBySearch");
         Integer totalCount =questionExtMapper.countBySearch(questionQueryDTO);
         System.out.println("=========到此一游================");
+        log.info("========经过questionExtMapper.countBySearch===========");
         if (totalCount%size==0){
             totalPage=totalCount/size;
         }else {
