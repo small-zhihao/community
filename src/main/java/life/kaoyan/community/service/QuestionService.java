@@ -41,7 +41,10 @@ public class QuestionService {
         Integer totalPage;
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         questionQueryDTO.setSearch(search);
+        System.out.println(search);
+        System.out.println("进入questionExtMapper.countBySearch");
         Integer totalCount =questionExtMapper.countBySearch(questionQueryDTO);
+        System.out.println("=========到此一游================");
         if (totalCount%size==0){
             totalPage=totalCount/size;
         }else {
