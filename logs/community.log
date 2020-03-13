@@ -58,3 +58,417 @@
 2020-03-13 15:46:54.552 DEBUG 22724 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
 2020-03-13 15:46:54.553 DEBUG 22724 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
 2020-03-13 15:46:54.554 DEBUG 22724 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:29:04.783  INFO 10504 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 10504 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 16:29:04.787  INFO 10504 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 16:29:05.029  INFO 10504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 16:29:05.029  INFO 10504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 16:29:05.119  WARN 10504 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 16:29:08.640  INFO 10504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 16:29:08.662  INFO 10504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 16:29:08.663  INFO 10504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 16:29:08.858  INFO 10504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 16:29:08.859  INFO 10504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3829 ms
+2020-03-13 16:29:08.933  INFO 10504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 16:29:09.139  INFO 10504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 16:29:09.151  INFO 10504 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 16:29:10.091  INFO 10504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 16:29:10.275  INFO 10504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 16:29:11.388  INFO 10504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 16:29:11.498  INFO 10504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 16:29:11.519  INFO 10504 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 7.971 seconds (JVM running for 14.427)
+2020-03-13 16:29:33.506  INFO 10504 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 16:29:33.507  INFO 10504 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 16:29:33.530  INFO 10504 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-03-13 16:29:33.729 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:29:33.804 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:29:33.839 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:29:33.842 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:29:33.848 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 16:29:33.870 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-03-13 16:29:33.872 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:29:33.884 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:29:33.886 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:29:33.908 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:29:33.916 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:29:33.920 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:29:33.921 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:29:33.921 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:29:33.922 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:29:33.923 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:29:33.924 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:29:33.929 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:29:33.930 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:29:33.930 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:29:33.932 DEBUG 10504 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:37:36.255  INFO 20312 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 20312 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 16:37:36.257  INFO 20312 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 16:37:36.442  INFO 20312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 16:37:36.545  INFO 20312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 16:37:36.892  WARN 20312 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 16:37:39.709  INFO 20312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 16:37:39.722  INFO 20312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 16:37:39.723  INFO 20312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 16:37:39.935  INFO 20312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 16:37:39.935  INFO 20312 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3385 ms
+2020-03-13 16:37:40.020  INFO 20312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 16:37:40.263  INFO 20312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 16:37:40.273  INFO 20312 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 16:37:41.387  INFO 20312 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 16:37:41.484  INFO 20312 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 16:37:42.687  INFO 20312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 16:37:42.772  INFO 20312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 16:37:42.781  INFO 20312 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 7.711 seconds (JVM running for 13.785)
+2020-03-13 16:38:01.916  INFO 20312 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 16:38:01.917  INFO 20312 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 16:38:01.932  INFO 20312 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-03-13 16:38:02.085 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:38:02.114 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:38:02.135 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:38:02.138 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:38:02.141 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 16:38:02.154 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-03-13 16:38:02.156 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:38:02.161 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:38:02.164 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:38:02.178 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:38:02.179 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:38:02.190 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:38:02.192 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:38:02.193 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:38:02.194 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:38:02.196 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:38:02.197 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:38:02.203 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:38:02.204 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:38:02.205 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:38:02.205 DEBUG 20312 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:39:52.984  INFO 424 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 424 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 16:39:52.989  INFO 424 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 16:39:53.217  INFO 424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 16:39:53.217  INFO 424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 16:39:53.494  WARN 424 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 16:39:55.533  INFO 424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 16:39:55.545  INFO 424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 16:39:55.545  INFO 424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 16:39:55.733  INFO 424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 16:39:55.734  INFO 424 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2515 ms
+2020-03-13 16:39:55.803  INFO 424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 16:39:55.990  INFO 424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 16:39:55.998  INFO 424 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 16:39:56.737  INFO 424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 16:39:56.877  INFO 424 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 16:39:57.625  INFO 424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 16:39:57.684  INFO 424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 16:39:57.689  INFO 424 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 5.784 seconds (JVM running for 9.871)
+2020-03-13 16:40:10.913  INFO 424 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 16:40:10.914  INFO 424 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 16:40:10.932  INFO 424 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-03-13 16:40:11.095 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:40:11.140 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:40:11.182 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:40:11.187 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:40:11.193 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 16:40:11.212 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-03-13 16:40:11.213 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:40:11.217 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:40:11.219 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:40:11.235 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:40:11.238 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:40:11.242 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:40:11.250 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:40:11.251 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:40:11.252 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:40:11.253 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:40:11.254 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:40:11.255 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:40:11.256 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-03-13 16:40:11.257 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-03-13 16:40:11.258 DEBUG 424 --- [http-nio-8887-exec-1] l.k.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-03-13 16:52:51.224  INFO 20272 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 20272 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 16:52:51.227  INFO 20272 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 16:52:51.504  INFO 20272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 16:52:51.505  INFO 20272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 16:52:51.759  WARN 20272 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 16:52:54.978  INFO 20272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 16:52:54.998  INFO 20272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 16:52:54.999  INFO 20272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 16:52:55.362  INFO 20272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 16:52:55.364  INFO 20272 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3828 ms
+2020-03-13 16:52:55.622  INFO 20272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 16:52:56.011  INFO 20272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 16:52:56.022  INFO 20272 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 16:52:56.968  INFO 20272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 16:52:57.077  INFO 20272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 16:52:58.051  INFO 20272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 16:52:58.147  INFO 20272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 16:52:58.153  INFO 20272 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 8.123 seconds (JVM running for 12.871)
+2020-03-13 16:53:09.462  INFO 20272 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 16:53:09.463  INFO 20272 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 16:53:09.497  INFO 20272 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 33 ms
+2020-03-13 16:53:11.488 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:53:11.517 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:53:11.545 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:53:11.548 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:53:11.556 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 16:53:11.559 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 16:53:28.544 ERROR 20272 --- [http-nio-8887-exec-9] l.k.c.controller.AuthorizeController     : callback get github error,GithubUser(name=null, id=null, bio=null, avatarUrl=null)
+2020-03-13 16:53:28.593 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:53:28.594 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:53:28.595 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:53:28.595 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:53:28.621 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 16:53:28.634 DEBUG 20272 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 16:53:56.256 ERROR 20272 --- [http-nio-8887-exec-10] l.k.c.controller.AuthorizeController     : callback get github error,GithubUser(name=null, id=null, bio=null, avatarUrl=null)
+2020-03-13 16:53:56.273 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 16:53:56.275 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 16:53:56.276 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 16:53:56.277 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 16:53:56.278 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 16:53:56.279 DEBUG 20272 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 17:20:03.117  INFO 19008 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 19008 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 17:20:03.125  INFO 19008 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 17:20:03.266  INFO 19008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 17:20:03.267  INFO 19008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 17:20:03.508  WARN 19008 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 17:20:06.336  INFO 19008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 17:20:06.364  INFO 19008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 17:20:06.366  INFO 19008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 17:20:06.580  INFO 19008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 17:20:06.581  INFO 19008 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3298 ms
+2020-03-13 17:20:06.685  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 17:20:06.935  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 17:20:06.946  INFO 19008 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 17:20:08.167  INFO 19008 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 17:20:08.526  INFO 19008 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 17:20:09.703  INFO 19008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 17:20:09.809  INFO 19008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 17:20:09.819  INFO 19008 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 8.106 seconds (JVM running for 16.114)
+2020-03-13 17:20:22.280  INFO 19008 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 17:20:22.281  INFO 19008 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 17:20:22.292  INFO 19008 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-03-13 17:20:22.394 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 17:20:22.418 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 17:20:22.438 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 17:20:22.442 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 17:20:22.446 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 17:20:22.449 DEBUG 19008 --- [http-nio-8887-exec-1] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 17:24:12.542 ERROR 19008 --- [http-nio-8887-exec-9] l.k.c.controller.AuthorizeController     : callback get github error,null
+2020-03-13 17:24:12.548  WARN 19008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s511ms535µs).
+2020-03-13 17:24:12.604 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 17:24:12.604 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 17:24:12.606 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 17:24:12.609 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 17:24:12.612 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 17:24:12.615 DEBUG 19008 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 17:24:28.426  INFO 19008 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-13 17:24:28.429  INFO 19008 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-13 17:24:28.435  INFO 19008 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-13 17:24:40.835  INFO 19308 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 19308 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 17:24:40.838  INFO 19308 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 17:24:41.025  INFO 19308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 17:24:41.026  INFO 19308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 17:24:41.331  WARN 19308 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 17:24:45.067  INFO 19308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 17:24:45.095  INFO 19308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 17:24:45.105  INFO 19308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 17:24:45.446  INFO 19308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 17:24:45.447  INFO 19308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4385 ms
+2020-03-13 17:24:45.558  INFO 19308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 17:24:45.908  INFO 19308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 17:24:45.918  INFO 19308 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 17:24:46.848  INFO 19308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 17:24:47.076  INFO 19308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 17:24:47.888  INFO 19308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 17:24:47.983  INFO 19308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 17:24:47.990  INFO 19308 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 8.629 seconds (JVM running for 13.634)
+2020-03-13 17:25:58.328  INFO 19308 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-13 17:25:58.330  INFO 19308 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-13 17:25:58.335  INFO 19308 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-13 17:26:09.293  INFO 7492 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 7492 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 17:26:09.300  INFO 7492 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 17:26:09.467  INFO 7492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 17:26:09.467  INFO 7492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 17:26:09.675  WARN 7492 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 17:26:11.785  INFO 7492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 17:26:11.797  INFO 7492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 17:26:11.797  INFO 7492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 17:26:11.977  INFO 7492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 17:26:11.978  INFO 7492 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2510 ms
+2020-03-13 17:26:12.054  INFO 7492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 17:26:12.225  INFO 7492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 17:26:12.232  INFO 7492 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 17:26:12.955  INFO 7492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 17:26:13.123  INFO 7492 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 17:26:14.077  INFO 7492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 17:26:14.151  INFO 7492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 17:26:14.157  INFO 7492 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 5.966 seconds (JVM running for 10.029)
+2020-03-13 17:26:24.772  INFO 7492 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 17:26:24.773  INFO 7492 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 17:26:24.793  INFO 7492 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-03-13 17:26:26.668 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 17:26:26.713 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 17:26:26.762 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 17:26:26.768 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 17:26:26.773 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 17:26:26.779 DEBUG 7492 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 17:39:59.741 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 17:39:59.742 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 17:39:59.743 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 17:39:59.746 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 17:39:59.749 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 17:39:59.751 DEBUG 7492 --- [http-nio-8887-exec-8] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 17:44:00.337 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? 
+2020-03-13 17:44:00.340 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String)
+2020-03-13 17:44:00.352 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 17:44:00.365 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? order by gmt_create desc limit ?,? 
+2020-03-13 17:44:00.366 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.Q.selectBySearch                 : ==> Parameters: (String), -5(Integer), 5(Integer)
+2020-03-13 17:44:00.368 DEBUG 7492 --- [http-nio-8887-exec-7] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:19:56.475  INFO 20960 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 20960 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 18:19:56.477  INFO 20960 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 18:19:56.737  INFO 20960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 18:19:56.759  INFO 20960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 18:19:56.948  WARN 20960 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 18:20:05.229  INFO 20960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 18:20:05.310  INFO 20960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 18:20:05.320  INFO 20960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 18:20:05.759  INFO 20960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 18:20:05.760  INFO 20960 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9001 ms
+2020-03-13 18:20:05.879  INFO 20960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 18:20:06.341  INFO 20960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 18:20:06.381  INFO 20960 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 18:20:08.129  INFO 20960 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 18:20:08.353  INFO 20960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 18:20:09.930  INFO 20960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 18:20:10.095  INFO 20960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 18:20:10.121  INFO 20960 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 15.086 seconds (JVM running for 22.295)
+2020-03-13 18:21:08.931  INFO 20960 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 18:21:08.932  INFO 20960 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 18:21:08.946  INFO 20960 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-13 18:21:11.745 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 18:21:11.779 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 18:21:11.807 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 18:21:11.810 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 18:21:11.813 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: -5(Integer), 5(Integer)
+2020-03-13 18:21:11.816 DEBUG 20960 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:28:58.321  INFO 19524 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 19524 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 18:28:58.327  INFO 19524 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 18:28:58.876  INFO 19524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 18:28:58.878  INFO 19524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 18:28:58.950  WARN 19524 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 18:29:02.155  INFO 19524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 18:29:02.174  INFO 19524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 18:29:02.175  INFO 19524 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 18:29:02.465  INFO 19524 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 18:29:02.466  INFO 19524 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3588 ms
+2020-03-13 18:29:02.569  INFO 19524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 18:29:03.053  INFO 19524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 18:29:03.078  INFO 19524 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 18:29:04.460  INFO 19524 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 18:29:04.575  INFO 19524 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 18:29:05.646  INFO 19524 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 18:29:05.738  INFO 19524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 18:29:05.748  INFO 19524 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 8.956 seconds (JVM running for 15.092)
+2020-03-13 18:29:14.867  INFO 19524 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 18:29:14.868  INFO 19524 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 18:29:14.879  INFO 19524 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-03-13 18:29:15.602 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 18:29:15.652 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 18:29:15.688 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 18:29:15.692 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 18:29:15.699 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 18:29:15.719 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:29:40.284 ERROR 19524 --- [http-nio-8887-exec-10] l.k.c.controller.AuthorizeController     : callback get github error,GithubUser(name=null, id=null, bio=null, avatarUrl=null)
+2020-03-13 18:29:40.307 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 18:29:40.308 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 18:29:40.309 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 18:29:40.309 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 18:29:40.310 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 18:29:40.311 DEBUG 19524 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:32:11.166  INFO 7392 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-AD6LGH5 with PID 7392 (C:\Users\Dell\IdeaProjects\community\target\classes started by Dell in C:\Users\Dell\IdeaProjects\community)
+2020-03-13 18:32:11.170  INFO 7392 --- [restartedMain] l.kaoyan.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 18:32:11.495  INFO 7392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-13 18:32:11.565  INFO 7392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-13 18:32:11.719  WARN 7392 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-03-13 18:32:14.389  INFO 7392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 18:32:14.403  INFO 7392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 18:32:14.404  INFO 7392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-13 18:32:14.620  INFO 7392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 18:32:14.621  INFO 7392 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3056 ms
+2020-03-13 18:32:14.698  INFO 7392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 18:32:14.868  INFO 7392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 18:32:14.877  INFO 7392 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:D:/community'
+2020-03-13 18:32:15.666  INFO 7392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 18:32:15.787  INFO 7392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 18:32:16.583  INFO 7392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-13 18:32:16.647  INFO 7392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 18:32:16.653  INFO 7392 --- [restartedMain] l.kaoyan.community.CommunityApplication  : Started CommunityApplication in 6.839 seconds (JVM running for 12.496)
+2020-03-13 18:32:29.368  INFO 7392 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 18:32:29.369  INFO 7392 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 18:32:29.383  INFO 7392 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-03-13 18:32:32.318 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 18:32:32.360 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 18:32:32.395 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 18:32:32.400 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 18:32:32.409 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 18:32:32.420 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:33:51.742 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-03-13 18:33:51.745 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: 60966764(String)
+2020-03-13 18:33:51.747 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-03-13 18:33:51.748 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.community.mapper.UserMapper.insert   : ==>  Preparing: insert into USER (ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL) values (?, ?, ?, ?, ?, ?, ?, ?) 
+2020-03-13 18:33:51.750 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.community.mapper.UserMapper.insert   : ==> Parameters: null, 60966764(String), 郭志昊(String), a78c20c4-841b-495c-80bf-7e8c94432015(String), 1584095631747(Long), 1584095631747(Long), null, https://avatars0.githubusercontent.com/u/60966764?v=4(String)
+2020-03-13 18:33:51.759 DEBUG 7392 --- [http-nio-8887-exec-5] l.k.community.mapper.UserMapper.insert   : <==    Updates: 1
+2020-03-13 18:33:51.787 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:51.788 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:51.790 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.521  WARN 7392 --- [http-nio-8887-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,720] milliseconds.
+2020-03-13 18:33:53.540 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.543 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.549 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.552 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-03-13 18:33:53.552 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-03-13 18:33:53.553 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-03-13 18:33:53.554 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-13 18:33:53.554 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-13 18:33:53.555 DEBUG 7392 --- [http-nio-8887-exec-6] l.k.c.m.Q.selectBySearch                 : <==      Total: 0
+2020-03-13 18:33:53.630 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.759 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.785 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.752 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.788 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.788 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.757 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.641 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.791 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.792 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.794 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.794 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.794 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.795 DEBUG 7392 --- [http-nio-8887-exec-9] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.795 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.796 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.797 DEBUG 7392 --- [http-nio-8887-exec-3] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.748 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.799 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.800 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.805 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.809 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.810 DEBUG 7392 --- [http-nio-8887-exec-4] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.812 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.814 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.818 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.820 DEBUG 7392 --- [http-nio-8887-exec-7] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.827 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.827 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.828 DEBUG 7392 --- [http-nio-8887-exec-8] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:53.894 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:53.895 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:53.896 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:53.898 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:53.966 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:53.968 DEBUG 7392 --- [http-nio-8887-exec-2] l.k.c.m.N.countByExample                 : <==      Total: 1
+2020-03-13 18:33:54.165 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-03-13 18:33:54.165 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.mapper.UserMapper.selectByExample  : ==> Parameters: a78c20c4-841b-495c-80bf-7e8c94432015(String)
+2020-03-13 18:33:54.166 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-03-13 18:33:54.172 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-03-13 18:33:54.172 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.m.N.countByExample                 : ==> Parameters: 2(Long), 0(Integer)
+2020-03-13 18:33:54.173 DEBUG 7392 --- [http-nio-8887-exec-10] l.k.c.m.N.countByExample                 : <==      Total: 1
