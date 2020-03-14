@@ -7,8 +7,23 @@
 - Maven
 - MySQL
 ##步骤
+- 强制删除rm -rf 
 - yum update
 - yum install git
+- mkdir App
+- cd App
+- git clone https://github.com/small-zhihao/community.git
+- cd community
+- yum install maven
+- java -version
+- mvn -v
+- mvn clean compile package//打包引入依赖,编译
+- more src/main/resources/application.properties
+- cp  src/main/resources/application.properties src/main/resources/application-production.properties
+- vim src/main/resources/application-production.properties
+- mvn package
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
+
 ## 资料
 [Spring 文档](https://spring.io/guides)
 [Spring Web文档](https://spring.io/guides/gs/serving-web-content/)
