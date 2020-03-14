@@ -1,2 +1,2 @@
-alter table QUESTION alter column ID BIGINT AUTO_INCREMENT not null;
-alter table USER alter column ID BIGINT AUTO_INCREMENT  not null ;
+alter table question modify id bigint auto_increment not null;
+alter table user modify id bigint auto_increment  not null ;

@@ -32,6 +32,8 @@
 - mvn flyway:repair
 - mvn flyway:migrate
 运行即可
+- mvn clean compile flyway:migrate
+- mvn clean compile flyway:repair
 
 
 
