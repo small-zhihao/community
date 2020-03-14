@@ -23,6 +23,17 @@
 - vim src/main/resources/application-production.properties
 - mvn package
 - java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
+- Ctrl+c 杀掉进程
+- ps -aux | grep java //查看进程是否杀掉
+- git pull//拉代码
+-mvn package 编译代码
+//更改脚本后拉代码
+- git pull
+- mvn flyway:repair
+- mvn flyway:migrate
+运行即可
+
+
 
 ## 资料
 [Spring 文档](https://spring.io/guides)
