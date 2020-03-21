@@ -35,7 +35,9 @@
 - mvn clean compile flyway:migrate
 - mvn clean compile flyway:repair
 
-
+mvn分离后
+mvn clean compile flyway:migrate -Pdev //本地是默认的
+mvn clean compile flyway:migrate -Pproduction//线上
 
 ## 资料
 [Spring 文档](https://spring.io/guides)
